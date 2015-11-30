@@ -55,6 +55,7 @@ class Chef
 
         all << u.name if @filter.call(u)
       end
+      node.rm('zap', 'users', 'keep')
 
       all
     end
